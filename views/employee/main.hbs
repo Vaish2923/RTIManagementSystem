@@ -1,0 +1,662 @@
+{{!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        } */
+        /.header{/
+            /* float: left;
+            clear: both;  */
+            /*width: 1000px;
+            height: 1000px;*/
+            /* padding: 200px 200px; */
+            /*padding-top: 0px;
+            padding-left: 0px;
+            padding-right: 0px;*/
+            /* background: url("https://i2.wp.com/grasslandsnews.ca/wp-content/uploads/2016/04/Court-Gavel.jpg?fit=602%2C401&ssl=1")no-repeat; */
+            /* background-size: cover;*/
+            /* background-position: center;  */
+           /* border-radius: 60px 0px 60px 0px; 
+           background-color: rgb(41, 40, 40);
+         
+           margin:40px;
+            margin-left: 300px;
+        }*/
+
+
+
+        .header {
+            margin-right:100px;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="header">
+        <img src="https://i2.wp.com/grasslandsnews.ca/wp-content/uploads/2016/04/Court-Gavel.jpg?fit=602%2C401&ssl=1" alt="" style="border-radius:60px 0 60px 0px; width: 1000px; 
+        "> 
+    </div>
+</body>
+</html> --}}
+
+
+{{!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cards</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin:0;
+        padding:0;
+        font-family: 'Poppins',sans-serif;
+        
+    }
+    .container .box {
+        position: relative;
+        width:350px;
+        padding: 40px;
+        background:#fff;
+        box-shadow: 0 5px 15px rgba(0,0,0,.1);
+        border-radius: 4px;
+        margin:20px;
+        box-sizing: border-box;
+        overflow: hidden;
+        text-align: center;
+       
+
+        
+    }
+    .container{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+       
+    }
+    .container .box .icon {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        color:#fff;
+        background:#000;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        border-radius: 50%;
+        font-size: 40px;
+        font-weight: 700;
+        transition: 1s;
+    }
+    .container .box:nth-child(1) .icon{
+        box-shadow:0 0 0 0 #e91e63;
+        background:#e91e63;
+
+    }
+    .container .box:nth-child(1):hover .icon{
+        box-shadow:0 0 0 400px #e91e63;
+        background:#e91e63;
+        
+    }
+
+    .container .box:nth-child(2) .icon{
+        box-shadow:0 0 0 0 #23e629;
+        background: #23e629;
+
+    }
+    .container .box:nth-child(2):hover .icon{
+        box-shadow:0 0 0 400px  #23e629;
+        background: #23e629;
+        
+    }
+
+    .container .box:nth-child(3) .icon{
+        box-shadow:0 0 0 0 #2196f3;
+        background:#2196f3;
+
+    }
+    .container .box:nth-child(3):hover .icon{
+        box-shadow:0 0 0 400px  #2196f3;
+        background: #2196f3;
+        
+    }
+
+    .container .box:nth-child(6) .icon{
+        box-shadow:0 0 0 0#ff5d5d;
+        background:#ff5d5d;
+
+    }
+    .container .box:nth-child(6):hover .icon{
+        box-shadow:0 0 0 400px#ff5d5d;
+        background:#ff5d5d;
+        
+    }
+
+    .container .box:nth-child(4) .icon{
+        box-shadow:0 0 0 0 #fcae1e;
+        background: #fcae1e;
+
+    }
+    .container .box:nth-child(4):hover .icon{
+        box-shadow:0 0 0 400px  #fcae1e;
+        background: #fcae1e;
+        
+    }
+
+    .container .box:nth-child(5) .icon{
+        box-shadow:0 0 0 0 #c52dc5;
+        background:#c53dc5;
+
+    }
+    .container .box:nth-child(5):hover .icon{
+        box-shadow:0 0 0 400px  #c52dc5;
+        background:#c52dc5;
+        
+    }
+
+    .container .box .content {
+        position: relative;
+        z-index: 1;
+        transition: 0.5s;
+        
+    }
+
+    .container .box:hover .content {
+       color: #fff;
+
+        
+    }
+    .container .box .content h3 {
+       font-size: 20px;
+       margin:10px 0;
+       padding: 0;
+       
+        
+    }
+    .container .box .content p {
+       margin: 0;
+       padding: 0;
+    }
+    /*a {
+        display:inline-block;
+        padding: 10px 20px;
+        background-color:  #333;
+        border-radius: 4px;
+        text-decoration: none;
+        color: #000;
+        font-weight: 500;
+        margin-top:20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    }*/
+    .container .box::before {
+        content: '';
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        top:0;
+        left:0;
+        background-color: rgba(255,255,255,.2);
+        z-index:2;
+        pointer-events: none;
+
+    }
+    
+
+
+    /* rgb(255, 232, 247);"    pink */
+
+</style>
+</head>
+<body  style="background-color: rgb(219, 229, 230); ">
+    {{>header}}
+    <div class="col-md-6 offset-md-3">
+    <h1 style="color: black; text-align:center;margin-top:60px"><b>Procedure of filing RTI</b></h1>
+        <div class="container" style="display: flex;">
+            <div class="box" style="margin-left: -250px; margin-top:80px" >
+                <div class="icon">01</div>
+                <div class="content">
+                    <h3>Step</h3>
+                    <p>Before filing any complain first applicant has to identify the issue and must have acknowledgement of all the rules mentioned in RTI Act-2005.</p>
+                    
+                </div>
+
+            </div>
+
+
+            <div class="box" style="margin-left: -0.5px;margin-top:80px">
+                <div class="icon">02</div>
+                <div class="content">
+                    <h3>Step</h3>
+                    <p>Applicant has to fill the form with all required fields present on this web portal. </p>
+                    
+                </div>
+
+            </div>
+
+            <div class="box" style="margin-right:-250px;margin-top:80px">
+                <div class="icon">03</div>
+                <div class="content">
+                    <h3>Step</h3>
+                    <p>Applicant has to describe complaint in brief. If the text of complaint is more than 3000 characters then upload a supporting document.
+                    </p>
+                    
+                </div>
+
+            </div>
+
+            <div class="box" style="margin-left: -250px;margin-top:80px">
+                <div class="icon">04</div>
+                <div class="content">
+                    <h3>Step</h3>
+                    <p>After approval of the application from applicant's side, that application will appear on the PIO’s dashboard.</p>
+                    
+                </div>
+
+            </div>
+
+            <div class="box" style="margin-left: -0.5px;margin-top:80px">
+                <div class="icon">05</div>
+                <div class="content">
+                    <h3>Step</h3>
+                    <p>PIO and APIO is answerable to the public request related information within time limit of 30 days.
+                    </p>
+                    
+                </div>
+
+            </div>
+
+            <div class="box"style="margin-right:-250px;margin-top:80px">
+                <div class="icon">06</div>
+                <div class="content">
+                    <h3>Step</h3>
+                    <p>In case the PIO and APIO fail to provide the information to applicant, respective PIO is held responsible to pay penalty.
+                    </p>
+                    
+                </div>
+
+            </div>
+        </div>
+        </div>
+    
+</body>
+</html>  --}}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+     <!-- jQuery library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+     <!-- Popper JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ 
+     <!-- Latest compiled JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link href="https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins',sans-serif;
+
+        }
+
+        .box {
+            position: relative;
+            width: 350px;
+            padding: 30px;
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+            border-radius: 4px;
+            margin: 20px;
+            box-sizing: border-box;
+            overflow: hidden;
+            text-align: center;
+
+        }
+
+        .box_2 {
+            position: relative;
+            width: 350px;
+            padding: 40px;
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+            border-radius: 4px;
+            margin: 20px;
+            box-sizing: border-box;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .container {
+           
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+        }
+
+        .container .box .icon {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            color: #fff;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            border-radius: 50%;
+            font-size: 40px;
+            font-weight: 700;
+            transition: 1s;
+            padding: 40px;
+        }
+
+        .container .box_2 .icon {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            color: #fff;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            border-radius: 50%;
+            font-size: 40px;
+            font-weight: 700;
+            transition: 1s;
+            padding: 40px;
+        }
+
+        .box:nth-child(1) .icon {
+            box-shadow: 0 0 0 0 #e91e63;
+            background: #e91e63;
+
+        }
+        .box:nth-child(1):hover .icon {
+            box-shadow: 0 0 0 400px #e91e63;
+            background: #e91e63;
+
+        }
+
+        .box:nth-child(2) .icon {
+            box-shadow: 0 0 0 0 #23e629;
+            background: #23e629;
+
+        }
+
+        .box:nth-child(2):hover .icon {
+            box-shadow: 0 0 0 400px #23e629;
+            background: #23e629;
+
+        }
+
+        .box:nth-child(3) .icon {
+            box-shadow: 0 0 0 0 #2196f3;
+            background: #2196f3;
+
+        }
+
+        .box:nth-child(3):hover .icon {
+            box-shadow: 0 0 0 400px #2196f3;
+            background: #2196f3;
+
+        }
+
+        .box_2:nth-child(3) .icon {
+            box-shadow: 0 0 0 0#ff5d5d;
+            background: #ff5d5d;
+
+        }
+
+        .box_2:nth-child(3):hover .icon {
+            box-shadow: 0 0 0 400px#ff5d5d;
+            background: #ff5d5d;
+
+        }
+
+        .box_2:nth-child(1) .icon {
+            box-shadow: 0 0 0 0 #fcae1e;
+            background: #fcae1e;
+
+        }
+
+         .box_2:nth-child(1):hover .icon {
+            box-shadow: 0 0 0 400px #fcae1e;
+            background: #fcae1e;
+
+        }
+
+        .box_2:nth-child(2) .icon {
+            box-shadow: 0 0 0 0 #c52dc5;
+            background: #c53dc5;
+
+        }
+
+        .box_2:nth-child(2):hover .icon {
+            box-shadow: 0 0 0 400px #c52dc5;
+            background: #c52dc5;
+
+        } 
+
+        /* .container .box:nth-child(2n) .icon{
+            background-color: sandybrown;
+        } */
+
+         .box .content {
+            position: relative;
+            z-index: 1;
+            transition: 0.5s;
+
+        }
+        .box_2 .content {
+            position: relative;
+            z-index: 1;
+            transition: 0.5s;
+
+        }
+
+        .container .box:hover .content {
+            color: #fff;
+
+
+        }
+
+        .container .box_2:hover .content {
+            color: #fff;
+
+
+        }
+
+        .container .box .content h3 {
+            font-size: 30px;
+            margin: 10px 0;
+            padding: 0;
+        }
+
+        .container .box .content p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container .box::before {
+            content: '';
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, .2);
+            z-index: 2;
+            pointer-events: none;
+
+        }
+        .container .box_2 .content h3 {
+            font-size: 30px;
+            margin: 10px 0;
+            padding: 0;
+        }
+
+        .container .box_2 .content p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container .box_2::before {
+            content: '';
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, .2);
+            z-index: 2;
+            pointer-events: none;
+
+        }
+
+        .box-shadow {
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+
+</head>
+
+<body style="background-color: rgb(219, 229, 230); ">
+    {{>header}}
+    {{!-- <header class="main_header">
+        <div class="d-flex justify-content-center align-items-center flex-column py-5 bg-dark ">
+            <h1 class="main_heading" style="color: aliceblue;">Walchand College of Engineering, Sangli</h1>
+            <h3 class="main_" style="color: aliceblue;">Online RTI Management System</h3>
+        </div>
+    </header> --}}
+    <!-- navbar  -->
+    
+    <!-- cards -->
+    <h1 style="color: black; text-align:center;margin-top:70px; margin-down:40px"><b>Procedure of filing RTI</b></h1>
+    <div class="container" style="margin-top:40px">
+        <div class="row" style="display: flex; margin-top:40px;">
+            <!-- <div class="col-md-4 py-3 py-sm-0"> -->
+                <div class="box col-md-3 py-3 py-sm-0" style="padding:35px; padding-left:-30px; margin-left:60px; width:50px">
+                    <div class="icon" style="padding:10px; margin-top:40px">01</div>
+                    <div class="content">
+                        <h4 style="padding-top:20px;"><b>Procedure</b></h3>
+                        <p style="padding: 10px;">Before filing any complain first applicant has to identify the issue and must have acknowledgement of all the rules mentioned in RTI Act-2005.</p>
+                    </div>
+                </div>
+            <!-- </div> -->
+
+
+            <!-- <div class="col-md-4 py-3 py-sm-0"> -->
+                <div class="box col-md-3 py-3 py-sm-0"style="padding:35px; padding-left:-30px; margin-left:60px; width:50px">
+
+                    <div class="icon" style="padding:10px; margin-top:40px">02</div>
+                    <div class="content">
+                        <h4 style="padding-top:20px;"><b>Procedure</b></h4>
+                        <p style="padding: 10px;">Applicant has to fill the form with all required fields present on this web portal.
+                </div>
+            </div>
+        
+            <!-- </div> -->
+
+
+            <!-- <div class="col-md-4 py-3 py-sm-0"> -->
+                <div class="box col-md-3 py-3 py-sm-0" style="padding:35px; padding-left:-30px; margin-left:60px; width:50px">
+
+                    <div class="icon" style="padding:10px; margin-top:40px">03</div>
+                    <div class="content">
+                        <h4 style="padding-top:20px;"><b>Procedure</b></h4>
+                        <p style="padding: 10px;" >Applicant has to describe complaint in brief. If the text of complaint is more than 3000 characters then upload a supporting document.</p>
+                    </div>
+                </div>
+            <!-- </div> -->
+
+        </div>
+
+
+
+
+
+
+        <div class="row">
+            <!-- <div class="col-md-4 py-3 py-sm-0"> -->
+                <div class="box_2 col-md-3 py-3 py-sm-0" style="padding:35px; padding-left:-30px; margin-left:60px; width:50px";>
+                    <div class="icon" style="padding:10px; margin-top:40px">04</div>
+                    <div class="content">
+                        <h4 style="padding-top:20px;"><b>Procedure</b></h4>
+                        <p style="padding: 10px;">After approval of the application from applicant's side, that application will appear on the PIO’s dashboard.</p>
+                    </div>
+                </div>
+            <!-- </div> -->
+
+
+            <!-- <div class="col-md-4 py-3 py-sm-0"> -->
+                <div class="box_2 col-md-3 py-3 py-sm-0" style="padding:35px; padding-left:-30px; margin-left:60px; width:50px">
+                    <div class="icon" style="padding:10px; margin-top:40px">05</div>
+                    <div class="content">
+                        <h4 style="padding-top:20px;"><b>Procedure</b></h4>
+                        <p style="padding: 10px;">PIO and APIO is answerable to the public request related information within time limit of 30 days.</p>
+                    </div>
+                </div>
+            <!-- </div> -->
+
+
+            <!-- <div class="col-md-4 py-3 py-sm-0"> -->
+                <div class="box_2 col-md-3 py-3 py-sm-0" style="padding:35px; padding-left:-30px; margin-left:60px; width:50px">
+                    <div class="icon" style="padding:10px; margin-top:40px">06</div>
+                    <div class="content">
+                        <h4 style="padding-top:20px;"><b>Procedure</b></h4>
+                        <p style="padding: 10px;">In case the PIO and APIO fail to provide the information to applicant, respective PIO is held responsible to pay penalty..</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

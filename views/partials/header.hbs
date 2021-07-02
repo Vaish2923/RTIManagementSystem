@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+{{!-- </head> --}}
+
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        /* Style the header with a grey background and some padding */
+      
+      /* *{
+        font-family: "Poppins", sans-serif;
+      }*/
+      .header {
+        overflow: hidden;
+        background-color: #383737;
+        padding: 20px 10px;
+      }
+      
+      /* Style the header links */
+      .header a {
+        float: left;
+        color: white;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 25px;
+        border-radius: 4px;
+      }
+      
+      /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+      .header a.logo {
+        font-size: 25px;
+        font-weight: bold;
+      }
+      
+      /* Change the background color on mouse-over */
+      .header a:hover {
+        background-color: dodgerblue;
+        color: black;
+      }
+      
+      /* Style the active/current link*/
+      .header a.active {
+        background-color: dodgerblue;
+        color: white;
+      }
+      
+      /* Float the link section to the right */
+      .header-right {
+        float: right;
+      }
+      
+      /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+      @media screen and (max-width: 500px) {
+        .header a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+        .header-right {
+          float: none;
+        }
+      }
+      </style>
+</head>
+<body>
+      
+      <header class="main_header" style="margin-top:-50px;background-color:#a6aeb3;">
+        <div class="d-flex justify-content-center align-items-center flex-column py-3">
+          <h1 class="main_heading" style="color:black;font-size:45px"><i> <img src="https://img.collegepravesh.com/2018/11/WCE-Sangli-Logo.png" alt="" width="130px" height="90px"
+            style="padding-left: 5px; margin-left:5px "></i><strong>Walchand College of Engineering, Sangli</strong></h1>
+            <h3 class="main_" style="color:black;font-size:30px; margin-top:-20px">An autonomus institute</h3>
+          
+
+        </div>
+      </header>
+
+      <div class="header" style=" box-shadow: 10px 10px 5px 2px gray ; ">
+       <a class="logo" style="color: white;  text-decoration: none; cursor: default; background-color:none;">
+                 Online RTI Management System</a>
+        <div class="header-right">
+          <a href="/navbar/home" style="color: white;font-size:x-large">Home</a>
+          <a href="/navbar/main" style="color: white;font-size:x-large">Procedure</a>
+          <a href="/navbar/employee" style="color: white;font-size:x-large">File RTI</a>
+           <a href="/navbar/slide" style="color: white;font-size:x-large">Gallery</a>
+            <a href="/navbar/login" style="color: white;font-size:x-large">Sign-In</a>
+             <a href="/navbar/main" style="color: white;font-size:x-large">About</a>
+        </div>
+      </div>
+</body>
+</html>

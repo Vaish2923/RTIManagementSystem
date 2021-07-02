@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <style>
+        .ver ul {
+            list-style-type: none;
+            margin-left: -350px;
+            padding: 0;
+            margin-top: -50px;
+            margin-right: -1020px;
+            width: 200px;
+            background-color: #f1f1f1;
+            float: left;
+            width: 200px;
+        }
+
+        .ver li a {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+
+            text-decoration: none;
+
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        .ver li a.active {
+            background-color: #0d458f;
+            color: white;
+            padding-right: 20px;
+            width: 200px;
+        }
+
+        .ver li a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+            width: 200px;
+        }
+
+
+
+        .btn-change {
+
+            background: #31708f;
+            margin: 20px;
+            float: left;
+            box-shadow: 0 0 1px #ccc;
+            -webkit-transition: all 0.5s ease-in-out;
+            border: 0px;
+            color: #fff;
+        }
+
+        .btn-change:hover {
+            -webkit-transform: scale(1.1);
+            background: #fff;
+            color: #000;
+        }
+
+        .card_css {}
+
+        .card_css1:hover {
+            -webkit-transform: scale(1.1);
+            box-shadow: 0 0 0 0 #fcae1e;
+            background: #fcae1e;
+            -webkit-transition: all 0.5s ease-in-out;
+            color: #000;
+        }
+
+        .card_css2:hover {
+            -webkit-transform: scale(1.1);
+            box-shadow: 0 0 0 400px rgb(202, 63, 98);
+            background: rgb(202, 63, 98);
+            -webkit-transition: all 0.5s ease-in-out;
+            color: #000;
+        }
+
+        .card_css3:hover {
+            -webkit-transform: scale(1.1);
+            box-shadow: 0 0 0 400px #23e629;
+            background: #23e629;
+
+            -webkit-transition: all 0.5s ease-in-out;
+            color: #000;
+        }
+
+        .card_css3:hover .btn_css:hover {
+            background-color: black;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .text_css h1:hover {
+            color: #fff;
+
+
+        }
+
+        .card_css:hover .btn:hover {
+            background-color: black;
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+    {{>header}}
+
+    {{!-- <div class="ver" style="padding-left:5px; margin-top:100px; margin-left:350px; border-radius:0%">
+
+        <ul style=" box-shadow: 3px 3px 3px 2px gray;">
+            <li><a href="#" class="active"><i class="fa fa-file"></i> DASHBOARD</a></li>
+            <li><a href="#"><i class="fa fa-file-text"></i> MANAGE RTI</a></li>
+            <li><a href="#"><i class="fa fa-bookmark"></i> ACTIVITY LOG</a></li>
+            <li><a href="#"><i class="fa fa-book-open"></i> REPORT</a></li>
+            <li><a href="#"><i class="fas fa-cog"></i> SETTING</a></li>
+            <li><a href="#"><i class="fas fa-address-book"></i> CONTACT</a></li>
+        </ul>
+    </div> --}}
+
+    <div class="ver" style="padding-left:5px; margin-top:100px; margin-left:350px; border-radius:0%">
+
+        <ul style=" box-shadow: 3px 3px 3px 2px gray;">
+            <li><a href="/employee/dashboard" class="active"><i class="fa fa-file"></i> DASHBOARD</a></li>
+            <li><a href="/employee/list"><i class="fa fa-file-text"></i> MANAGE RTI</a></li>
+            <li><a href="#"><i class="fa fa-bookmark" aria-hidden="true"></i> ACTIVITY LOG</a></li>
+            {{!-- <li><a href="#"><i class="fa fa-boomark" aria-hidden="true"></i> REPORT</a></li> --}}
+            {{!-- <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i> REPORT</a></li> --}}
+            <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i> REPORT</a></li>
+            <li><a href="#"><i class="fa fa-address-book" aria-hidden="true"></i> CONTACT</a></li>
+        </ul>
+    </div>
+
+    <script>
+	    let global=0;
+    </script>
+
+
+
+    {{!--<h1>{{viewTitle}}</h1>--}}
+
+    <div class="container" style="margin-top: 80px; margin-left:250px">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card card_css1"
+                    style="width: 17rem;  box-shadow:0px 2px 10px rgba(0,0,0,0.5); margin-left: 35px;">
+
+                    <div class="card-body">
+                        <h4 class="card-title"> <i class="fa fa-user-circle-o fa-10x" aria-hidden="true"></i> Total
+                        </h4>
+                        <hr>
+                        <p class="text_css">
+                        <h1 style="margin-left: 20px; font-size:65px; margin-top:27px; color:#000">{{viewTitle}}</h1>
+                        </p>
+                        {{!-- <a href="#" class="btn_css" style="margin-top: -3px;">Go somewhere</a> --}}
+                        {{!-- <button type="button" class="btn btn-outline-secondary">Secondary</button> --}}
+                        {{!-- <button class="btn-change">Button</button> --}}
+
+                        {{!-- <button
+                            style="border-radius: 2px; background-color:rgb(26, 91, 187); color:white; padding:5px; border:solid rgb(26, 91, 187)">
+                            Go somewhere
+                        </button> --}}
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card card_css2" style="width: 17rem; box-shadow:0px 2px 10px rgba(0,0,0,0.5);">
+
+                    <div class="card-body" style="margin-right:-20px;">
+                        <h4 class="card-title"> <i class="fa fa-hourglass-half fa-10x" aria-hidden="true"></i> Pending
+                        </h4>
+                        <hr>
+                        <p class="card-text text_css">
+                        <h1 style="margin-left: 20px; font-size:65px; margin-top:27px; color:#000">0</h1>
+                        </p>
+                        {{!-- <a href="#" class="btn btn-dark btn_css" style="margin-top: -3px;">Go somewhere</a> --}}
+
+                        {{!-- <button class=" btn"
+                            style="border-radius: 2px; background-color:rgb(26, 91, 187); color:white; padding:5px; border:solid rgb(26, 91, 187)">
+                            Go somewhere
+                        </button> --}}
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card card_css3"
+                    style="width: 17rem; box-shadow:0px 2px 10px rgba(0,0,0,0.5); margin-left:-20px;">
+                    <div class="card-body">
+                        <h4 class="card-title"> <i class="fa fa-check-square-o fa-10x" aria-hidden="true"></i> Responded
+                        </h4>
+                        <hr>
+                        <p class="card-text text_css">
+                        <h1 style="margin-left: 20px; font-size:65px; margin-top:27px; color:#000" id="output">1</h1>
+                        </p>
+                        {{!-- <a href="#" class="btn btn-primary btn-change btn_css" style="margin-top: -3px;">Go
+                            somewhere</a> --}}
+
+                        {{!-- <button
+                            style="border-radius: 2px; background-color:rgb(26, 91, 187); color:white; padding:5px; border:solid rgb(26, 91, 187)">
+                            Go somewhere
+                        </button> --}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
+
+
+    <div class="col-md-6 offset-md-3" style="margin-top:1100px">
+        <table id="example" class="table table-striped table-bordered"
+            style="width:150% ; padding-left : -200px; margin-left:-85px; margin-top:-1000px; box-shadow: 10px 10px 10px 5px gray; padding: 20px; padding-bottom: 30px ;">
+            <thead style="background-color: #0d458f ; color:white;">
+                <tr>
+                    <th>RTI No</th>
+
+                    <th>Date of Request</th>
+                    <th>Date of Response</th>
+                    {{!-- <th>Days Passed</th> --}}
+                </tr>
+            </thead>
+
+            <tbody>
+                {{#each docs}}
+                <tr style=" font-family: 'Ubuntu', sans-serif;">
+                    <td>{{this.rtino}}</td>
+
+                    <td>{{this.datereq}}</td>
+
+                    <td>{{this.dateres}}</td>
+
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+</body>
+
+</html>

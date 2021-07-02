@@ -1,0 +1,190 @@
+{{!-- rich textarea : khalacha sagala part copy paste marlela ahe...ani yaat text-area field nahiye tar eka div la tya form madhe convert kelay..so amhi tyachya  "name" attriute la 'textarea' value takun fetch karayacha try karat hoto   --}}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        *,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+.toolbar {}
+.tool-list {
+	display: flex;
+	flex-flow: row nowrap;
+	list-style: none;
+	padding: 0;
+	margin: 1rem;
+	overflow: hidden;
+	border-raduis: 10px;
+}
+.tool {}
+.tool--btn {
+	display: block;
+	border: none;
+	padding: .5rem;
+	font-size: 20px;
+}
+
+#output {
+	height: 400px; 
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	margin: 1rem;
+	padding: 1rem;
+}
+    </style>
+</head>
+<body>
+        {{>header}}
+
+
+		<div style="padding-top: 40px;"><h1 style="text-align: center; font-size:45px"><b>Give Response Here</h1></b></div>
+
+    <div class="toolbar" style="margin-top: 55px;">
+	<ul class="tool-list" style="border:2px solid black; margin-right: 1045px">
+		<li class="tool">
+			<button 
+				type="button" 
+				data-command='justifyLeft'
+				class="tool--btn">
+				<i class=' fa fa-align-left' aria-hidden="true"></i>
+			</button>
+		</li>
+		<li class="tool">
+			<button 
+				type="button" 
+				data-command='justifyCenter' 
+				class="tool--btn">
+				<i class=' fa fa-align-center' aria-hidden="true"></i>
+			</button>
+		</li>
+		<li class="tool">
+			<button 
+				type="button" 
+				data-command="bold" 
+				class="tool--btn">
+				<i class=' fa fa-bold' aria-hidden="true"></i>
+			</button>
+		</li>
+		<li class="tool">
+			<button 
+				type="button" 
+				data-command="italic"
+				class="tool--btn">
+				<i class=' fa fa-italic' aria-hidden="true"></i>
+			</button>
+		</li>
+		<li class="tool">
+			<button 
+				type="button" 
+				data-command="underline"
+				class="tool--btn">
+				<i class=' fa fa-underline' aria-hidden="true"></i>
+			</button>
+		</li>
+		<li class="tool">
+			<button 
+				type="button" 
+				data-command="insertOrderedList"
+				class="tool--btn">
+				<i class=' fa fa-list-ol' aria-hidden="true"></i>
+			</button>
+		</li>
+		<li class="tool">
+			<button 
+				type="button" 
+				data-command="insertUnorderedList"
+				class="tool--btn">
+				<i class=' fa fa-list-ul' aria-hidden="true"></i>
+			</button>
+		</li>
+		<li class="tool">
+			<button 
+				type="button" 
+				data-command="createlink" 
+				class="tool--btn">
+				<i class=' fa fa-link' aria-hidden="true"></i>
+			</button>
+		</li>
+	</ul>
+</div>
+
+{{!-- <div id="output" name="textarea" contenteditable="true"></div> --}}
+
+
+ <form action="/employee/list" method="POST" autocomplete="off">
+
+    <input type="hidden" name="_id" value="{{employee._id}}">
+
+             <div id="output" name="textarea" contenteditable="true" value="{{response.textarea}}"></div>
+
+    
+
+
+<script>
+    let output = document.getElementById('output');
+let buttons = document.getElementsByClassName('tool--btn');
+for (let btn of buttons) {
+	btn.addEventListener('click', () => {
+		let cmd = btn.dataset['command'];
+		if(cmd === 'createlink') {
+			let url = prompt("Enter the link here: ", "http:\/\/");
+			document.execCommand(cmd, false, url);
+		} else {
+			document.execCommand(cmd, false, null);
+		}
+	})
+}
+</script>
+
+{{!-- <script>
+	//let global=0;
+</script> --}}
+
+ <span id="thisone">0</span>
+<button style="float: right; padding:5px; margin-right:15px; text-decoration:none; color:black; font-weight:bold; box-shadow: 5px 5px 5px 2px gray ;" ><a href="/employee/list" id="foo">Submit <i class="fa fa-share-square-o" aria-hidden="true"></i></a></button>
+</form>
+{{!-- <script type="text/javascript">
+	function addone(){
+		//var foo = document.getElementById('thisone').innerHTML;
+		//foo++;
+		//document.getElementById('thisone').innerHTML =foo;
+		//global=foo;
+	}
+</script> --}}
+
+
+ <script>
+	let increment = 0;
+
+const button = document.getElementById('foo');
+const output = document.getElementById('output');
+
+const updateOutput = function() {
+  output.innerHTML = `Value is ${increment}`;
+}
+
+button.addEventListener("click", function(){
+    increment++;
+    updateOutput();
+});
+setInterval(updateOutput, 1000)
+
+console.log(`External call, value: ${increment}`);
+</script>
+
+
+
+
+
+</body>
+</html>

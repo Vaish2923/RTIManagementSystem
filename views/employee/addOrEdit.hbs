@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+{{!-- <body style="background-color:rgb(154, 228, 247)"> --}}
+
+
+     {{!-- style="background-color:  rgb(233, 233, 252);; --}}
+<body  style="background-color: rgb(219, 229, 230); ">
+    
+     {{>header}}
+
+
+
+    <div style=" border: 2px solid black; box-shadow: 10px 10px 10px 5px gray; padding: 20px; display: flex; flex-wrap:wrap;  background-color:white; margin-top:60px" class="col-md-6 offset-md-3">
+
+        <h3 style="text-align: center; font-size: 45px; padding:15px padding-top: 35; padding-bottom:30px;"></h3>
+
+        <form action="/employee" method="POST" autocomplete="off">
+
+            <input type="hidden" name="_id" value="{{employee._id}}">
+
+
+            <div class="form-group" style="padding-left: 30px;">
+                <h1 style="text-align: center; padding-left:200px; margin-bottom:40px;">FILE RTI</h1>
+
+                <label>RTI Registration Number</label>
+                <input type="number" class="form-control" name="rtino" placeholder="" value="{{employee.rtino}}">
+
+                <div class="text-danger" >
+                    {{employee.rtinoError}}
+                </div>
+
+            </div>
+
+
+            <div class="form-group" style="padding-left: 30px;">
+
+                <label>RTI Category</label>
+                {{!-- <input type="text" class="form-control" name="rticat" placeholder="" > --}}
+                <select name="rticat" id="rticat" value="{{employee.rticat}}">
+                    <option value="ExamCell">ExamCell</option>
+                    <option value="Recrutment">Recruitment</option>
+                    <option value="Payment">Payment</option>
+                </select>
+
+                <div class="text-danger">
+                    {{employee.rticatError}}
+                </div>
+            </div>
+
+            <div class="form-group" style="padding-left: 30px;">
+                <label>Seeking Person - Name</label>
+                <input type="text" class="form-control" name="fullname" placeholder="" value="{{employee.fullname}}">
+
+                <div class="text-danger">
+                    {{employee.fullNameError}}
+                </div>
+            </div>
+
+            <div class="form-group" style="padding-left: 30px;">
+
+                <label>Gender of the Seeking Person</label>
+                {{!-- <input type="text" class="form-control" name="mobile" placeholder="mobile" value="{{employee.mobile}}">
+         --}}
+                <select name="gender" id="gender" value="{{employee.gender}}">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+
+
+            </div>
+            <div class="form-group" style="padding-left: 30px;">
+
+                <p>Seeking Person - Address</p>
+                {{!-- <input type="text" class="form-control" name="mobile" placeholder="mobile" value="{{employee.mobile}}"> --}}
+                <textarea name="address" id="address" cols="50" rows="5" value="{{employee.address}}"></textarea>
+
+
+                <div class="text-danger">
+                    {{employee.addressError}}
+                </div>
+
+            </div>
+
+
+            <div class="form-group" style="padding-left: 30px;">
+                <label>Date of Request</label>
+                <input type="date" class="form-control" name="datereq" placeholder="" value="{{employee.datereq}}">
+
+                <div class="text-danger">
+                    {{employee.datereqError}}
+                </div>
+            </div>
+
+            <div class="form-group" style="padding-left: 30px;">
+
+                <p>Summary</p>
+                <textarea name="summary" id="summary" cols="50" rows="5" value="{{employee.summary}}"></textarea>
+
+            </div>
+            <div class="text-danger">
+                {{employee.summaryError}}
+            </div>
+            {{!-- </div> --}}
+
+            <div class="form-group" style="padding-left: 30px;">
+
+                <label>Information Sought</label>
+                <input type="text" class="form-control" name="extrainformation" placeholder=""
+                    value="{{employee.extrainformation}}">
+
+                <div class="text-danger">
+                    {{employee.extrainformationError}}
+                </div>
+            </div>
+            <div class="form-group" style="padding-left: 30px;">
+                <button type="submit" class="btn btn-info" onclick="alert('submitted Successfully!')"><i class="fa fa-database"></i>
+                    Submit
+                </button>
+
+                {{!-- <a class="btn btn-secondary" href="/employee/list"><i class="fa fa-list-alt"></i>View All</a> --}}
+            </div>
+
+        </form>
+
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+{{!-- <link rel="stylesheet" href=".src/components/Sidebar.js">
+
+<h3>{{viewTitle}}</h3>
+
+ <form action="/employee" method="POST" autocomplete="off"> 
+
+<input type="hidden" name="_id" value="{{employee._id}}">
+
+    <div class="form-group">
+
+        <label>RTI Registration Number</label>
+        <input type="number" class="form-control" name="rtino" placeholder="" value="{{employee.rtino}}">
+
+        <div class="text-danger">
+        {{employee.rtinoError}}
+    </div>
+
+    </div>
+
+    
+    
+
+{{!-- <div class="text-danger">
+        {{employee.rticatError}}
+    </div>
+    </div>  --}}
+
+{{!-- <div class="form-group">
+    <label>Seeking Person - Name</label>
+    <input type="text" class="form-control" name="fullname" placeholder="" value="{{employee.fullname}}">
+
+     <div class="text-danger">
+        {{employee.fullNameError}}
+    </div> 
+    </div>
+
+    <div class="form-group"> --}}
+
+{{!-- <label>Gender of the Seeking Person</label> --}}
+{{!-- <input type="text" class="form-control" name="mobile" placeholder="mobile" value="{{employee.mobile}}">
+         --}}
+{{!-- <select name="gender" id="gender" value="{{employee.gender}}">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+
+
+    </div>
+    <div class="form-group">
+
+        <label for="address">Seeking Person - Address</label> --}}
+{{!-- <input type="text" class="form-control" name="mobile" placeholder="mobile" value="{{employee.mobile}}"> --}}
+{{!-- <textarea name="address" id="address" cols="20" rows="5" value="{{employee.address}}"></textarea>
+
+    <div class="text-danger">
+        {{employee.addressError}}
+    </div>
+
+    </div>
+
+
+<div class="form-group">
+    <label>Date of Request</label>
+    <input type="date" class="form-control" name="datereq" placeholder=""  value="{{employee.datereq}}">
+
+    <div class="text-danger">
+        {{employee.datereqError}}
+    </div>
+</div>
+
+<div class="form-group">
+
+        <label>Summary</label>
+        <textarea name="summary" id="summary" cols="20" rows="5" value="{{employee.summary}}"></textarea>
+
+    </div>
+    <div class="text-danger">
+        {{employee.summaryError}}
+    </div>
+</div>
+    
+<div class="form-group">
+
+        <label>Information Sought</label>
+        <input type="text" class="form-control" name="extrainformation" placeholder="" value="{{employee.extrainformation}}">
+
+<div class="text-danger">
+        {{employee.extrainformationError}}
+    </div>
+    </div>
+ --}}
+
+{{!-- <div class="text-danger">
+        {{employee.emailError}}
+    </div>
+</div> --}}
+
+
+
+{{!-- <div class="form-row">
+    <div class="form-group col-md-6">
+
+        <label>mobile</label>
+        <input type="text" class="form-control" name="mobile" placeholder="mobile" value="{{employee.mobile}}">
+
+    </div>
+    <div class="form-group col-md-6">
+        <label>City</label>
+        <input type="text" class="form-control" name="city" placeholder="City" value="{{employee.city}}">
+    </div>
+</div> --}}
+
+{{!-- <div class="form-group">
+    <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>
+        Submit
+    </button> --}}
+
+{{!-- <a class="btn btn-secondary" href="/employee/list"><i class="fa fa-list-alt"></i>View All</a> --}}
+{{!-- </div>
+
+</form> --}}
