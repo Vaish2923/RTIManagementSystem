@@ -117,7 +117,7 @@ router.get('/dashboard',  (req,res) => {
             res.render("employee/dashboard" ,{
                
                 docs,
-                viewTitle:`${user}`
+                viewTitle:`${docs.length}`
             });
         }
         else{
